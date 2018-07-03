@@ -31,7 +31,7 @@
     return bgView;
 }
 
-+ (UIView *)showNewGuideRectWithKey:(NSString *)key {
++ (UIView *)showNewGuideRectWithRoundedRect:(CGRect)rect cornerRadius:(CGFloat)cornerRadius {
     // 这里创建指引在这个视图在window上
     CGRect frame = [UIScreen mainScreen].bounds;
     UIView *bgView = [[UIView alloc] initWithFrame:frame];
@@ -42,7 +42,7 @@
     //create path 重点来了（**这里需要添加第一个路径）
     UIBezierPath *path = [UIBezierPath bezierPathWithRect:frame];
     // 这里添加第二个路径 （这个是矩形）
-    [path appendPath:[[UIBezierPath bezierPathWithRoundedRect:CGRectMake(frame.size.width/2.0-1, 234, frame.size.width/2.0+1, 55) cornerRadius:5] bezierPathByReversingPath]];
+    [path appendPath:[[UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:cornerRadius] bezierPathByReversingPath]];
     CAShapeLayer *shapeLayer = [CAShapeLayer layer];
     shapeLayer.path = path.CGPath;
     //shapeLayer.strokeColor = [UIColor blueColor].CGColor;

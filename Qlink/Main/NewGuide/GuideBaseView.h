@@ -11,6 +11,6 @@
 @interface GuideBaseView : UIView
 
 + (UIView *)showNewGuideCircleWithArcCenter:(CGPoint)center radius:(CGFloat)radius;
-+ (UIView *)showNewGuideRect;
++ (UIView *)showNewGuideRectWithRoundedRect:(CGRect)rect cornerRadius:(CGFloat)cornerRadius;
 
 @end
