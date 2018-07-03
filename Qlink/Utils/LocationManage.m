@@ -68,7 +68,6 @@
 }
 
 #pragma CLLocationManager delegate
-
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations {
     
     [self stopLocation];
