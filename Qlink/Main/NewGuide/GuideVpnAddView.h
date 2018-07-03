@@ -11,6 +11,6 @@
 @interface GuideVpnAddView : GuideBaseView
 
 + (GuideVpnAddView *)getNibView;
-- (void)showGuideTo:(UIView *)toView;
+- (void)showGuideTo:(CGRect)hollowOutFrame;
 
 @end

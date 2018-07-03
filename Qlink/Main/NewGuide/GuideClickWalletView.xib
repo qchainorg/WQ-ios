@@ -21,17 +21,17 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KVy-In-Qny">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                    <rect key="frame" x="0.0" y="417" width="375" height="250"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_floating_layer_add" translatesAutoresizingMaskIntoConstraints="NO" id="elv-Ae-43N">
-                            <rect key="frame" x="310" y="27" width="52" height="106"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_floating_layer_wallet" translatesAutoresizingMaskIntoConstraints="NO" id="elv-Ae-43N">
+                            <rect key="frame" x="275" y="158" width="75" height="92"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="106" id="PCQ-mz-sYe"/>
-                                <constraint firstAttribute="width" constant="52" id="esx-53-wCc"/>
+                                <constraint firstAttribute="width" constant="75" id="FrR-WX-zTh"/>
+                                <constraint firstAttribute="height" constant="92" id="dma-eJ-hg6"/>
                             </constraints>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Earn QLC by sharing your configuration file" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="THJ-3C-NoX">
-                            <rect key="frame" x="25" y="141" width="325" height="44.5"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Save your QLC token here" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="THJ-3C-NoX">
+                            <rect key="frame" x="25" y="127.5" width="325" height="22.5"/>
                             <fontDescription key="fontDescription" name="VAGRoundedBT-Regular" family="VAGRounded BT" pointSize="18"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
@@ -39,31 +39,31 @@
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="250" id="6FA-7P-P8w"/>
-                        <constraint firstAttribute="trailing" secondItem="elv-Ae-43N" secondAttribute="trailing" constant="13" id="BTU-17-6kC"/>
-                        <constraint firstItem="THJ-3C-NoX" firstAttribute="top" secondItem="elv-Ae-43N" secondAttribute="bottom" constant="8" id="Ce9-X1-8Mz"/>
-                        <constraint firstAttribute="trailing" secondItem="THJ-3C-NoX" secondAttribute="trailing" constant="25" id="Iij-8u-PZq"/>
-                        <constraint firstItem="THJ-3C-NoX" firstAttribute="leading" secondItem="KVy-In-Qny" secondAttribute="leading" constant="25" id="Uns-yU-J9i"/>
-                        <constraint firstItem="elv-Ae-43N" firstAttribute="top" secondItem="KVy-In-Qny" secondAttribute="top" constant="27" id="VxE-W4-YK2"/>
+                        <constraint firstAttribute="trailing" secondItem="THJ-3C-NoX" secondAttribute="trailing" constant="25" id="8eE-qn-ZZz"/>
+                        <constraint firstAttribute="bottom" secondItem="elv-Ae-43N" secondAttribute="bottom" id="BHD-0I-E9N"/>
+                        <constraint firstAttribute="height" constant="250" id="BcY-CS-IGe"/>
+                        <constraint firstItem="elv-Ae-43N" firstAttribute="top" secondItem="THJ-3C-NoX" secondAttribute="bottom" constant="8" id="BdM-Lc-eZK"/>
+                        <constraint firstAttribute="trailing" secondItem="elv-Ae-43N" secondAttribute="trailing" constant="25" id="DXo-Kp-S9d"/>
+                        <constraint firstItem="THJ-3C-NoX" firstAttribute="leading" secondItem="KVy-In-Qny" secondAttribute="leading" constant="25" id="sIb-Ge-jPg"/>
                     </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="KVy-In-Qny" firstAttribute="trailing" secondItem="V0j-So-FUx" secondAttribute="trailing" id="4y6-ZL-ICR"/>
-                <constraint firstItem="KVy-In-Qny" firstAttribute="leading" secondItem="V0j-So-FUx" secondAttribute="leading" id="C1d-sJ-xOt"/>
-                <constraint firstItem="KVy-In-Qny" firstAttribute="top" secondItem="V0j-So-FUx" secondAttribute="top" id="e8J-Ch-9mr"/>
+                <constraint firstItem="gHL-xo-aZ8" firstAttribute="bottom" secondItem="KVy-In-Qny" secondAttribute="bottom" id="B4F-Gf-cgB"/>
+                <constraint firstItem="KVy-In-Qny" firstAttribute="leading" secondItem="gHL-xo-aZ8" secondAttribute="leading" id="krr-sb-3lo"/>
+                <constraint firstItem="KVy-In-Qny" firstAttribute="trailing" secondItem="gHL-xo-aZ8" secondAttribute="trailing" id="sJg-gV-aX8"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="gHL-xo-aZ8"/>
             <connections>
-                <outlet property="rightOffset" destination="BTU-17-6kC" id="Coe-HC-14s"/>
-                <outlet property="topOffset" destination="VxE-W4-YK2" id="OEZ-XS-8tu"/>
+                <outlet property="bottomOffset" destination="BHD-0I-E9N" id="Fap-mq-dpp"/>
+                <outlet property="rightOffset" destination="DXo-Kp-S9d" id="KTr-vc-9JQ"/>
             </connections>
             <point key="canvasLocation" x="349.5" y="138.5"/>
         </view>
     </objects>
     <resources>
-        <image name="img_floating_layer_add" width="52" height="105"/>
+        <image name="img_floating_layer_wallet" width="75" height="92"/>
     </resources>
 </document>

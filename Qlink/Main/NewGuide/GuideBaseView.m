@@ -51,4 +51,8 @@
     return bgView;
 }
 
+- (void)showGuideTo:(CGRect)hollowOutFrame tapBlock:(void (^)(void))tapB {
+    
+}
+
 @end

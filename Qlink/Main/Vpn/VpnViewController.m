@@ -41,6 +41,7 @@
 #import "ZXChatViewController.h"
 #import "TransferUtil.h"
 #import "GuideVpnAddView.h"
+#import "GuideClickWalletView.h"
 
 @interface VpnViewController ()<UITableViewDelegate,UITableViewDataSource,SRRefreshDelegate> {
 }
@@ -109,8 +110,7 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     [self refreshVPNConnect];
-//    [self addNewGuideClickWallet];
-    [self addNewGuideClickAdd];
+    [self addNewGuideClickWallet];
 }
 
 #pragma mark - Operation
@@ -509,7 +509,18 @@ static BOOL refreshAnimate = YES;
 }
 
 - (void)addNewGuideClickAdd {
-    [[GuideVpnAddView getNibView] showGuideTo:_registerVPNBtn];
+    CGRect hollowOutFrame = [_registerVPNBtn.superview convertRect:_registerVPNBtn.frame toView:[UIApplication sharedApplication].keyWindow];
+    [[GuideVpnAddView getNibView] showGuideTo:hollowOutFrame tapBlock:^{
+        
+    }];
+}
+
+- (void)addNewGuideClickWallet {
+    CGRect hollowOutFrame = CGRectMake((3.0*(2.0+1.0)-2.0)*SCREEN_WIDTH/(3.0*3.0), SCREEN_HEIGHT - 49, 49, 49);
+    @weakify_self
+    [[GuideClickWalletView getNibView] showGuideTo:hollowOutFrame tapBlock:^{
+        [weakSelf addNewGuideClickAdd];
+    }];
 }
 
 //- (void)addNewGuideClickWallet {

@@ -6,8 +6,11 @@
 //  Copyright © 2018年 pan. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "GuideBaseView.h"
 
-@interface GuideClickWalletView : UIView
+@interface GuideClickWalletView : GuideBaseView
+
++ (GuideClickWalletView *)getNibView;
+
 
 @end

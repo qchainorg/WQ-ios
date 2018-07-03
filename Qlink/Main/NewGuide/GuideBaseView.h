@@ -12,5 +12,6 @@
 
 + (UIView *)showNewGuideCircleWithArcCenter:(CGPoint)center radius:(CGFloat)radius;
 + (UIView *)showNewGuideRectWithRoundedRect:(CGRect)rect cornerRadius:(CGFloat)cornerRadius;
+- (void)showGuideTo:(CGRect)hollowOutFrame tapBlock:(void (^)(void))tapB;
 
 @end
