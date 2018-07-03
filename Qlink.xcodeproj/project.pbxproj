@@ -754,9 +754,6 @@
 		58A2495B20D207AB00781549 /* VersionManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VersionManager.m; sourceTree = "<group>"; };
 		58A4DB0320EB0DC6001C241D /* ConfigurationRelease.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ConfigurationRelease.plist; sourceTree = "<group>"; };
 		58A4DB0520EB0DC6001C241D /* ConfigurationDebug.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ConfigurationDebug.plist; sourceTree = "<group>"; };
-		58A4DB0720EB0DC6001C241D /* WAMacroUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WAMacroUtil.h; sourceTree = "<group>"; };
-		58A4DB0820EB0DC6001C241D /* ServerMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerMacro.h; sourceTree = "<group>"; };
-		58A4DB0920EB0DC6001C241D /* GlobalMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalMacro.h; sourceTree = "<group>"; };
 		58A4DB0D20EB13C8001C241D /* GuideVpnAddView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GuideVpnAddView.h; sourceTree = "<group>"; };
 		58A4DB0E20EB13C8001C241D /* GuideVpnAddView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GuideVpnAddView.m; sourceTree = "<group>"; };
 		58A4DB1020EB13D8001C241D /* GuideVpnAddView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GuideVpnAddView.xib; sourceTree = "<group>"; };
@@ -1230,6 +1227,9 @@
 		73EA1B1E207B3EF600B4F71D /* WalletSelectCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WalletSelectCell.m; sourceTree = "<group>"; };
 		73F1C8FC2089E699001F1A0F /* VPNFileUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VPNFileUtil.h; sourceTree = "<group>"; };
 		73F1C8FD2089E699001F1A0F /* VPNFileUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VPNFileUtil.m; sourceTree = "<group>"; };
+		73FF63D320EB7DC500E29B3B /* WAMacroUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WAMacroUtil.h; sourceTree = "<group>"; };
+		73FF63D420EB7DC500E29B3B /* ServerMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerMacro.h; sourceTree = "<group>"; };
+		73FF63D520EB7DC500E29B3B /* GlobalMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalMacro.h; sourceTree = "<group>"; };
 		93185A7AFF490BBB8104B577 /* Pods-Qlink.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Qlink.release.xcconfig"; path = "Pods/Target Support Files/Pods-Qlink/Pods-Qlink.release.xcconfig"; sourceTree = "<group>"; };
 		C8C9F75488743A3ABC4DAD17 /* Pods-Qlink.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Qlink.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Qlink/Pods-Qlink.debug.xcconfig"; sourceTree = "<group>"; };
 		F1A3E51F89966A6974D528B9 /* Pods-Qlink.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Qlink.adhoc.xcconfig"; path = "Pods/Target Support Files/Pods-Qlink/Pods-Qlink.adhoc.xcconfig"; sourceTree = "<group>"; };
@@ -2061,16 +2061,6 @@
 			path = Debug;
 			sourceTree = "<group>";
 		};
-		58A4DB0620EB0DC6001C241D /* Macros */ = {
-			isa = PBXGroup;
-			children = (
-				58A4DB0720EB0DC6001C241D /* WAMacroUtil.h */,
-				58A4DB0820EB0DC6001C241D /* ServerMacro.h */,
-				58A4DB0920EB0DC6001C241D /* GlobalMacro.h */,
-			);
-			path = Macros;
-			sourceTree = "<group>";
-		};
 		58A4DB0C20EB11EF001C241D /* NewGuide */ = {
 			isa = PBXGroup;
 			children = (
@@ -2129,8 +2119,8 @@
 		58A4DEA8206234AC00E72F52 /* Qlink */ = {
 			isa = PBXGroup;
 			children = (
+				73FF63D220EB7DC500E29B3B /* Macros */,
 				58A4DB0120EB0DC6001C241D /* Config */,
-				58A4DB0620EB0DC6001C241D /* Macros */,
 				730DA8F720886A7800CE1909 /* CustomViews */,
 				580D913420625A4300B12506 /* Base */,
 				580D90C520625A4300B12506 /* Categorys */,
@@ -2464,6 +2454,16 @@
 				5860ADC520CFB62200EEB6CE /* NotifactionView.xib */,
 			);
 			path = NotifactionView;
+			sourceTree = "<group>";
+		};
+		73FF63D220EB7DC500E29B3B /* Macros */ = {
+			isa = PBXGroup;
+			children = (
+				73FF63D320EB7DC500E29B3B /* WAMacroUtil.h */,
+				73FF63D420EB7DC500E29B3B /* ServerMacro.h */,
+				73FF63D520EB7DC500E29B3B /* GlobalMacro.h */,
+			);
+			path = Macros;
 			sourceTree = "<group>";
 		};
 		F2B7452EF089D21E85A1F2EF /* Frameworks */ = {
