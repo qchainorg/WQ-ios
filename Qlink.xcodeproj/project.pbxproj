@@ -109,7 +109,6 @@
 		58270FC62072055800C08784 /* HistoryRecordsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58270FC42072055800C08784 /* HistoryRecordsViewController.m */; };
 		58270FCC2072089800C08784 /* HistoryRecordsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 58270FCA2072089800C08784 /* HistoryRecordsCell.m */; };
 		58270FD820720D3600C08784 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58270FD620720D3600C08784 /* ProfileViewController.m */; };
-		582F0B1320E1E20000698B47 /* NewGuideUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 582F0B1220E1E20000698B47 /* NewGuideUtil.m */; };
 		5833AD0C206C8427002C6909 /* WalletMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5833AD0B206C8427002C6909 /* WalletMenuView.m */; };
 		5834CC5B207E1573009168F8 /* VPNConnectedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5834CC59207E1573009168F8 /* VPNConnectedViewController.m */; };
 		583910F9208495F200A19E7E /* DDLogUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 583910F8208495F200A19E7E /* DDLogUtil.m */; };
@@ -120,8 +119,6 @@
 		5839F5252068F9FA004C4A54 /* NSString+HexStr.m in Sources */ = {isa = PBXBuildFile; fileRef = 5839F5242068F9FA004C4A54 /* NSString+HexStr.m */; };
 		5839F5282068FC70004C4A54 /* MD5Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 5839F5262068FC70004C4A54 /* MD5Util.m */; };
 		5839F52B2069EB21004C4A54 /* DigestUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5839F52A2069EB21004C4A54 /* DigestUtils.m */; };
-		5839F534206B47CF004C4A54 /* ConfigurationRelease.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5839F531206B47CF004C4A54 /* ConfigurationRelease.plist */; };
-		5839F535206B47CF004C4A54 /* ConfigurationDebug.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5839F533206B47CF004C4A54 /* ConfigurationDebug.plist */; };
 		583A0F6A20844D8A00EF9ABD /* ContinentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 583A0F6820844D8A00EF9ABD /* ContinentModel.m */; };
 		583A0F6D20844DC400EF9ABD /* SelectCountryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 583A0F6C20844DC400EF9ABD /* SelectCountryModel.m */; };
 		58441B8F20BD5B7300904DC8 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58441B8C20BD5B7300904DC8 /* SettingViewController.m */; };
@@ -198,6 +195,11 @@
 		58A074242092FD8400470E37 /* TransferUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A074232092FD8400470E37 /* TransferUtil.m */; };
 		58A2495920D0F60C00781549 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58A2495820D0F60C00781549 /* WebKit.framework */; };
 		58A2495C20D207AB00781549 /* VersionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A2495B20D207AB00781549 /* VersionManager.m */; };
+		58A4DB0A20EB0DC6001C241D /* ConfigurationRelease.plist in Resources */ = {isa = PBXBuildFile; fileRef = 58A4DB0320EB0DC6001C241D /* ConfigurationRelease.plist */; };
+		58A4DB0B20EB0DC6001C241D /* ConfigurationDebug.plist in Resources */ = {isa = PBXBuildFile; fileRef = 58A4DB0520EB0DC6001C241D /* ConfigurationDebug.plist */; };
+		58A4DB0F20EB13C8001C241D /* GuideVpnAddView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A4DB0E20EB13C8001C241D /* GuideVpnAddView.m */; };
+		58A4DB1120EB13D8001C241D /* GuideVpnAddView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58A4DB1020EB13D8001C241D /* GuideVpnAddView.xib */; };
+		58A4DB1420EB1F38001C241D /* GuideBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A4DB1320EB1F38001C241D /* GuideBaseView.m */; };
 		58A4DEAB206234AC00E72F52 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A4DEAA206234AC00E72F52 /* AppDelegate.m */; };
 		58A4DEAE206234AC00E72F52 /* LaunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A4DEAD206234AC00E72F52 /* LaunchViewController.m */; };
 		58A4DEB6206234AC00E72F52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58A4DEB4206234AC00E72F52 /* LaunchScreen.storyboard */; };
@@ -491,8 +493,6 @@
 		580D917320625FDB00B12506 /* Language.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Language.m; sourceTree = "<group>"; };
 		580D91752062600A00B12506 /* AFHTTPClientV2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClientV2.h; sourceTree = "<group>"; };
 		580D91762062600A00B12506 /* AFHTTPClientV2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClientV2.m; sourceTree = "<group>"; };
-		580D91782062603B00B12506 /* GlobalMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlobalMacro.h; sourceTree = "<group>"; };
-		580D91792062603B00B12506 /* WAMacroUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WAMacroUtil.h; sourceTree = "<group>"; };
 		580D917A206260C300B12506 /* WifiViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WifiViewController.h; sourceTree = "<group>"; };
 		580D917B206260C300B12506 /* WifiViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WifiViewController.m; sourceTree = "<group>"; };
 		580D9184206260DE00B12506 /* VpnViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VpnViewController.h; sourceTree = "<group>"; };
@@ -578,8 +578,6 @@
 		58270FCA2072089800C08784 /* HistoryRecordsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HistoryRecordsCell.m; sourceTree = "<group>"; };
 		58270FD520720D3600C08784 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		58270FD620720D3600C08784 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
-		582F0B1120E1E20000698B47 /* NewGuideUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewGuideUtil.h; sourceTree = "<group>"; };
-		582F0B1220E1E20000698B47 /* NewGuideUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewGuideUtil.m; sourceTree = "<group>"; };
 		5833AD0A206C8427002C6909 /* WalletMenuView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WalletMenuView.h; sourceTree = "<group>"; };
 		5833AD0B206C8427002C6909 /* WalletMenuView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WalletMenuView.m; sourceTree = "<group>"; };
 		5834CC58207E1573009168F8 /* VPNConnectedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VPNConnectedViewController.h; sourceTree = "<group>"; };
@@ -590,7 +588,6 @@
 		583910FB2084971F00A19E7E /* DebugLogViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DebugLogViewController.m; sourceTree = "<group>"; };
 		5839F5172068CFA8004C4A54 /* RequestService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RequestService.h; sourceTree = "<group>"; };
 		5839F5182068CFA8004C4A54 /* RequestService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RequestService.m; sourceTree = "<group>"; };
-		5839F51A2068D19D004C4A54 /* ServerMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServerMacro.h; sourceTree = "<group>"; };
 		5839F51D2068F60E004C4A54 /* JSONUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSONUtil.h; sourceTree = "<group>"; };
 		5839F51E2068F60E004C4A54 /* JSONUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSONUtil.m; sourceTree = "<group>"; };
 		5839F5202068F8E0004C4A54 /* NSString+UrlEncode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+UrlEncode.m"; sourceTree = "<group>"; };
@@ -601,8 +598,6 @@
 		5839F5272068FC70004C4A54 /* MD5Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MD5Util.h; sourceTree = "<group>"; };
 		5839F5292069EB21004C4A54 /* DigestUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DigestUtils.h; sourceTree = "<group>"; };
 		5839F52A2069EB21004C4A54 /* DigestUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DigestUtils.m; sourceTree = "<group>"; };
-		5839F531206B47CF004C4A54 /* ConfigurationRelease.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ConfigurationRelease.plist; sourceTree = "<group>"; };
-		5839F533206B47CF004C4A54 /* ConfigurationDebug.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ConfigurationDebug.plist; sourceTree = "<group>"; };
 		583A0F6820844D8A00EF9ABD /* ContinentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContinentModel.m; sourceTree = "<group>"; };
 		583A0F6920844D8A00EF9ABD /* ContinentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContinentModel.h; sourceTree = "<group>"; };
 		583A0F6B20844DC400EF9ABD /* SelectCountryModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelectCountryModel.h; sourceTree = "<group>"; };
@@ -745,6 +740,16 @@
 		58A2495820D0F60C00781549 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		58A2495A20D207AB00781549 /* VersionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VersionManager.h; sourceTree = "<group>"; };
 		58A2495B20D207AB00781549 /* VersionManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VersionManager.m; sourceTree = "<group>"; };
+		58A4DB0320EB0DC6001C241D /* ConfigurationRelease.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ConfigurationRelease.plist; sourceTree = "<group>"; };
+		58A4DB0520EB0DC6001C241D /* ConfigurationDebug.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ConfigurationDebug.plist; sourceTree = "<group>"; };
+		58A4DB0720EB0DC6001C241D /* WAMacroUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WAMacroUtil.h; sourceTree = "<group>"; };
+		58A4DB0820EB0DC6001C241D /* ServerMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerMacro.h; sourceTree = "<group>"; };
+		58A4DB0920EB0DC6001C241D /* GlobalMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalMacro.h; sourceTree = "<group>"; };
+		58A4DB0D20EB13C8001C241D /* GuideVpnAddView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GuideVpnAddView.h; sourceTree = "<group>"; };
+		58A4DB0E20EB13C8001C241D /* GuideVpnAddView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GuideVpnAddView.m; sourceTree = "<group>"; };
+		58A4DB1020EB13D8001C241D /* GuideVpnAddView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GuideVpnAddView.xib; sourceTree = "<group>"; };
+		58A4DB1220EB1F38001C241D /* GuideBaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GuideBaseView.h; sourceTree = "<group>"; };
+		58A4DB1320EB1F38001C241D /* GuideBaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GuideBaseView.m; sourceTree = "<group>"; };
 		58A4DEA6206234AC00E72F52 /* Qlink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Qlink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58A4DEA9206234AC00E72F52 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		58A4DEAA206234AC00E72F52 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -1514,16 +1519,6 @@
 			path = Vender;
 			sourceTree = "<group>";
 		};
-		580D912C20625A4300B12506 /* Macros */ = {
-			isa = PBXGroup;
-			children = (
-				580D91782062603B00B12506 /* GlobalMacro.h */,
-				580D91792062603B00B12506 /* WAMacroUtil.h */,
-				5839F51A2068D19D004C4A54 /* ServerMacro.h */,
-			);
-			path = Macros;
-			sourceTree = "<group>";
-		};
 		580D912E20625A4300B12506 /* Request */ = {
 			isa = PBXGroup;
 			children = (
@@ -1538,6 +1533,7 @@
 		580D912F20625A4300B12506 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				58A4DB0C20EB11EF001C241D /* NewGuide */,
 				736053FE20DB8EB4004CD3C3 /* GuidePage */,
 				58441B8B20BD5B4300904DC8 /* Setting */,
 				58270FCE20720CD200C08784 /* Profile */,
@@ -1711,8 +1707,6 @@
 				58A2495B20D207AB00781549 /* VersionManager.m */,
 				7351508B20D3B71300194711 /* DBManageUtil.h */,
 				7351508C20D3B71300194711 /* DBManageUtil.m */,
-				582F0B1120E1E20000698B47 /* NewGuideUtil.h */,
-				582F0B1220E1E20000698B47 /* NewGuideUtil.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -1931,31 +1925,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		5839F52F206B47CF004C4A54 /* Config */ = {
-			isa = PBXGroup;
-			children = (
-				5839F530206B47CF004C4A54 /* Release */,
-				5839F532206B47CF004C4A54 /* Debug */,
-			);
-			path = Config;
-			sourceTree = "<group>";
-		};
-		5839F530206B47CF004C4A54 /* Release */ = {
-			isa = PBXGroup;
-			children = (
-				5839F531206B47CF004C4A54 /* ConfigurationRelease.plist */,
-			);
-			path = Release;
-			sourceTree = "<group>";
-		};
-		5839F532206B47CF004C4A54 /* Debug */ = {
-			isa = PBXGroup;
-			children = (
-				5839F533206B47CF004C4A54 /* ConfigurationDebug.plist */,
-			);
-			path = Debug;
-			sourceTree = "<group>";
-		};
 		58441B8B20BD5B4300904DC8 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
@@ -2035,6 +2004,53 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		58A4DB0120EB0DC6001C241D /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				58A4DB0220EB0DC6001C241D /* Release */,
+				58A4DB0420EB0DC6001C241D /* Debug */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		58A4DB0220EB0DC6001C241D /* Release */ = {
+			isa = PBXGroup;
+			children = (
+				58A4DB0320EB0DC6001C241D /* ConfigurationRelease.plist */,
+			);
+			path = Release;
+			sourceTree = "<group>";
+		};
+		58A4DB0420EB0DC6001C241D /* Debug */ = {
+			isa = PBXGroup;
+			children = (
+				58A4DB0520EB0DC6001C241D /* ConfigurationDebug.plist */,
+			);
+			path = Debug;
+			sourceTree = "<group>";
+		};
+		58A4DB0620EB0DC6001C241D /* Macros */ = {
+			isa = PBXGroup;
+			children = (
+				58A4DB0720EB0DC6001C241D /* WAMacroUtil.h */,
+				58A4DB0820EB0DC6001C241D /* ServerMacro.h */,
+				58A4DB0920EB0DC6001C241D /* GlobalMacro.h */,
+			);
+			path = Macros;
+			sourceTree = "<group>";
+		};
+		58A4DB0C20EB11EF001C241D /* NewGuide */ = {
+			isa = PBXGroup;
+			children = (
+				58A4DB1220EB1F38001C241D /* GuideBaseView.h */,
+				58A4DB1320EB1F38001C241D /* GuideBaseView.m */,
+				58A4DB0D20EB13C8001C241D /* GuideVpnAddView.h */,
+				58A4DB0E20EB13C8001C241D /* GuideVpnAddView.m */,
+				58A4DB1020EB13D8001C241D /* GuideVpnAddView.xib */,
+			);
+			path = NewGuide;
+			sourceTree = "<group>";
+		};
 		58A4DE9D206234AC00E72F52 = {
 			isa = PBXGroup;
 			children = (
@@ -2060,12 +2076,12 @@
 		58A4DEA8206234AC00E72F52 /* Qlink */ = {
 			isa = PBXGroup;
 			children = (
+				58A4DB0120EB0DC6001C241D /* Config */,
+				58A4DB0620EB0DC6001C241D /* Macros */,
 				730DA8F720886A7800CE1909 /* CustomViews */,
-				5839F52F206B47CF004C4A54 /* Config */,
 				580D913420625A4300B12506 /* Base */,
 				580D90C520625A4300B12506 /* Categorys */,
 				580D919A2063ADD400B12506 /* CustomFonts */,
-				580D912C20625A4300B12506 /* Macros */,
 				580D912F20625A4300B12506 /* Main */,
 				580D913520625A4300B12506 /* Model */,
 				580D912E20625A4300B12506 /* Request */,
@@ -2600,7 +2616,6 @@
 				5860ACDC20CFB49800EEB6CE /* VPNRegisterViewController.xib in Resources */,
 				5860ACF120CFB4C900EEB6CE /* ChooseContinentViewController.xib in Resources */,
 				737F90B720E3965D008BC9C2 /* GuidePageView3.xib in Resources */,
-				5839F534206B47CF004C4A54 /* ConfigurationRelease.plist in Resources */,
 				73C1BA13207E184F0080C59F /* HMScanner.bundle in Resources */,
 				73B6F4E720AEC08E004B7219 /* nodes.json in Resources */,
 				5860AD6F20CFB5A700EEB6CE /* NewWalletViewController.xib in Resources */,
@@ -2637,6 +2652,7 @@
 				5860AC9620CFB40F00EEB6CE /* SettingViewController.xib in Resources */,
 				5860ACC720CFB46900EEB6CE /* VPNFileInputView.xib in Resources */,
 				58A4DEB6206234AC00E72F52 /* LaunchScreen.storyboard in Resources */,
+				58A4DB0B20EB0DC6001C241D /* ConfigurationDebug.plist in Resources */,
 				5860ACAB20CFB43E00EEB6CE /* WifiViewController.xib in Resources */,
 				5860AD4520CFB56700EEB6CE /* BuyQlcView.xib in Resources */,
 				5860AC9D20CFB42000EEB6CE /* WebViewController.xib in Resources */,
@@ -2653,6 +2669,7 @@
 				5860ACCE20CFB47400EEB6CE /* VpnTabCell.xib in Resources */,
 				737F909D20E3960A008BC9C2 /* GuidePageView1.xib in Resources */,
 				5860AD3020CFB53000EEB6CE /* SettingCell.xib in Resources */,
+				58A4DB0A20EB0DC6001C241D /* ConfigurationRelease.plist in Resources */,
 				5860AD5A20CFB58800EEB6CE /* MyAssetsView.xib in Resources */,
 				5860AD5320CFB57E00EEB6CE /* WalletAddressView.xib in Resources */,
 				580D91C02063B27300B12506 /* VAGRounded-Bold.ttf in Resources */,
@@ -2663,9 +2680,9 @@
 				5860AD2920CFB52600EEB6CE /* MyAssetsCell.xib in Resources */,
 				5860ACE320CFB4A500EEB6CE /* VpnViewController.xib in Resources */,
 				5860AD0620CFB4EA00EEB6CE /* VPNConnectedViewController.xib in Resources */,
+				58A4DB1120EB13D8001C241D /* GuideVpnAddView.xib in Resources */,
 				73B6F4E420AEC08E004B7219 /* strip-frameworks.sh in Resources */,
 				5860ACD520CFB48100EEB6CE /* ChooseCountryCell.xib in Resources */,
-				5839F535206B47CF004C4A54 /* ConfigurationDebug.plist in Resources */,
 				5860ACFF20CFB4E000EEB6CE /* VPNConnectViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2813,6 +2830,7 @@
 				5834CC5B207E1573009168F8 /* VPNConnectedViewController.m in Sources */,
 				5812DDA820A1A7890043A8A8 /* ZXChatBoxFaceView.m in Sources */,
 				73A05A332081D91600974483 /* HYBImageClipedManager.m in Sources */,
+				58A4DB1420EB1F38001C241D /* GuideBaseView.m in Sources */,
 				73B6F4CB20AEC08E004B7219 /* Data+Util.swift in Sources */,
 				73B6F4D020AEC08E004B7219 /* NEP5Token.swift in Sources */,
 				5812DDA920A1A7890043A8A8 /* ZXChatBoxItemView.m in Sources */,
@@ -2866,7 +2884,6 @@
 				73048F16207A19B500A4EFEE /* BalanceInfo.m in Sources */,
 				5812DDBE20A1A7D20043A8A8 /* UIDevice+TL.m in Sources */,
 				5812DDAD20A1A7890043A8A8 /* ZXChatBoxView.m in Sources */,
-				582F0B1320E1E20000698B47 /* NewGuideUtil.m in Sources */,
 				58CD93A720A2CCCD0004F1F0 /* ChatHeadView.m in Sources */,
 				73B6F4C420AEC08E004B7219 /* RIPEMD160.swift in Sources */,
 				7360540120DB905B004CD3C3 /* GuidePageView1.m in Sources */,
@@ -2920,6 +2937,7 @@
 				580D91C72064A27100B12506 /* QGradientView.m in Sources */,
 				580D917D206260C300B12506 /* WifiViewController.m in Sources */,
 				73CACEF520721F73007C518B /* WalletDetailViewController.m in Sources */,
+				58A4DB0F20EB13C8001C241D /* GuideVpnAddView.m in Sources */,
 				580D915320625A4400B12506 /* UIView+ViewController.m in Sources */,
 				580D914320625A4400B12506 /* UIImage+Rotate.m in Sources */,
 				580D919920638F8A00B12506 /* SwiftFile.swift in Sources */,
