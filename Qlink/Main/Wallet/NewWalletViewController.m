@@ -14,7 +14,6 @@
 #import "WalletInfo.h"
 #import "WalletCreateSuccessViewController.h"
 #import "WalletUtil.h"
-#import "NewGuideUtil.h"
 #import "Qlink-Swift.h"
 
 @interface NewWalletViewController ()
@@ -63,33 +62,33 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
-    [self addNewGuide];
+//    [self addNewGuide];
 }
 
 #pragma mark - Config View
-- (void)addNewGuide {
-//    [HWUserdefault insertObj:@(NO) withkey:NEW_GUIDE_CREATE_NEW_WALLET];
-    NSNumber *guideLocal = [HWUserdefault getObjectWithKey:NEW_GUIDE_CREATE_NEW_WALLET];
-    if (!guideLocal || [guideLocal boolValue] == NO) {
-        UIView *guideBV = [NewGuideUtil showNewGuideWithKey:NEW_GUIDE_CREATE_NEW_WALLET TapBlock:^{
-        }];
-        UIImage *guideImg = [UIImage imageNamed:@"img_img_floating_layer_new_wallet"];
-        UIImageView *guideImgV = [[UIImageView alloc] init];
-        guideImgV.frame = CGRectZero;
-        if (IS_iPhone_5) {
-            guideImgV.frame = CGRectMake((SCREEN_WIDTH-guideImg.size.width)/2.0, 220, guideImg.size.width, guideImg.size.height);
-        } else if (IS_iPhone_6) {
-            guideImgV.frame = CGRectMake((SCREEN_WIDTH-guideImg.size.width)/2.0, 220, guideImg.size.width, guideImg.size.height);
-        } else if (IS_iPhone6_Plus) {
-            guideImgV.frame = CGRectMake((SCREEN_WIDTH-guideImg.size.width)/2.0, 220, guideImg.size.width, guideImg.size.height);
-        } else if (IS_iPhoneX) {
-            guideImgV.frame = CGRectMake((SCREEN_WIDTH-guideImg.size.width)/2.0, 244, guideImg.size.width, guideImg.size.height);
-        }
-        
-        guideImgV.image = guideImg;
-        [guideBV addSubview:guideImgV];
-    }
-}
+//- (void)addNewGuide {
+////    [HWUserdefault insertObj:@(NO) withkey:NEW_GUIDE_CREATE_NEW_WALLET];
+//    NSNumber *guideLocal = [HWUserdefault getObjectWithKey:NEW_GUIDE_CREATE_NEW_WALLET];
+//    if (!guideLocal || [guideLocal boolValue] == NO) {
+//        UIView *guideBV = [NewGuideUtil showNewGuideWithKey:NEW_GUIDE_CREATE_NEW_WALLET TapBlock:^{
+//        }];
+//        UIImage *guideImg = [UIImage imageNamed:@"img_img_floating_layer_new_wallet"];
+//        UIImageView *guideImgV = [[UIImageView alloc] init];
+//        guideImgV.frame = CGRectZero;
+//        if (IS_iPhone_5) {
+//            guideImgV.frame = CGRectMake((SCREEN_WIDTH-guideImg.size.width)/2.0, 220, guideImg.size.width, guideImg.size.height);
+//        } else if (IS_iPhone_6) {
+//            guideImgV.frame = CGRectMake((SCREEN_WIDTH-guideImg.size.width)/2.0, 220, guideImg.size.width, guideImg.size.height);
+//        } else if (IS_iPhone6_Plus) {
+//            guideImgV.frame = CGRectMake((SCREEN_WIDTH-guideImg.size.width)/2.0, 220, guideImg.size.width, guideImg.size.height);
+//        } else if (IS_iPhoneX) {
+//            guideImgV.frame = CGRectMake((SCREEN_WIDTH-guideImg.size.width)/2.0, 244, guideImg.size.width, guideImg.size.height);
+//        }
+//        
+//        guideImgV.image = guideImg;
+//        [guideBV addSubview:guideImgV];
+//    }
+//}
 
 /**
  创建钱包

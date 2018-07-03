@@ -31,7 +31,6 @@
 #import "VPNRegisterViewController.h"
 #import "Qlink-Swift.h"
 #import "SettingViewController.h"
-#import "NewGuideUtil.h"
 
 #define WAIL_TIME 30
 
@@ -90,7 +89,7 @@
         [_refreshScroll addSubview:self.slimeView];
     }
     
-    [self addNewGuide];
+//    [self addNewGuide];
 }
 
 
@@ -118,44 +117,44 @@
     
 }
 
-- (void)addNewGuide {
-//    [HWUserdefault insertObj:@(NO) withkey:NEW_GUIDE_SETTING_WALLET];
-    NSNumber *guideLocal = [HWUserdefault getObjectWithKey:NEW_GUIDE_SETTING_WALLET];
-    if (!guideLocal || [guideLocal boolValue] == NO) {
-        UIView *guideBV = [NewGuideUtil showNewGuideWithKey:NEW_GUIDE_SETTING_WALLET TapBlock:nil];
-        UIImage *guideImg = [UIImage imageNamed:@"img_floating_layer_wallet"];
-        UIImageView *guideImgV = [[UIImageView alloc] init];
-        guideImgV.frame = CGRectZero;
-        if (IS_iPhone_5) {
-            guideImgV.frame = CGRectMake(SCREEN_WIDTH-guideImg.size.width - 12, 25, guideImg.size.width, guideImg.size.height);
-        } else if (IS_iPhone_6) {
-            guideImgV.frame = CGRectMake(SCREEN_WIDTH-guideImg.size.width - 12, 25, guideImg.size.width, guideImg.size.height);
-        } else if (IS_iPhone6_Plus) {
-            guideImgV.frame = CGRectMake(SCREEN_WIDTH-guideImg.size.width - 12, 25, guideImg.size.width, guideImg.size.height);
-        } else if (IS_iPhoneX) {
-            guideImgV.frame = CGRectMake(SCREEN_WIDTH-guideImg.size.width - 12, 50, guideImg.size.width, guideImg.size.height);
-        }
-        
-        guideImgV.image = guideImg;
-        [guideBV addSubview:guideImgV];
-        
-        UIImage *guideImg1 = [UIImage imageNamed:@"img_floating_layer_vpn"];
-        UIImageView *guideImgV1 = [[UIImageView alloc] init];
-        guideImgV1.frame = CGRectZero;
-        if (IS_iPhone_5) {
-            guideImgV1.frame = CGRectMake(2, SCREEN_HEIGHT - guideImg1.size.height + 5, guideImg1.size.width, guideImg1.size.height);
-        } else if (IS_iPhone_6) {
-            guideImgV1.frame = CGRectMake(10, SCREEN_HEIGHT - guideImg1.size.height + 5, guideImg1.size.width, guideImg1.size.height);
-        } else if (IS_iPhone6_Plus) {
-            guideImgV1.frame = CGRectMake(10, SCREEN_HEIGHT - guideImg1.size.height + 8, guideImg1.size.width, guideImg1.size.height);
-        } else if (IS_iPhoneX) {
-            guideImgV1.frame = CGRectMake(10, SCREEN_HEIGHT - guideImg1.size.height - 30, guideImg1.size.width, guideImg1.size.height);
-        }
-        
-        guideImgV1.image = guideImg1;
-        [guideBV addSubview:guideImgV1];
-    }
-}
+//- (void)addNewGuide {
+////    [HWUserdefault insertObj:@(NO) withkey:NEW_GUIDE_SETTING_WALLET];
+//    NSNumber *guideLocal = [HWUserdefault getObjectWithKey:NEW_GUIDE_SETTING_WALLET];
+//    if (!guideLocal || [guideLocal boolValue] == NO) {
+//        UIView *guideBV = [NewGuideUtil showNewGuideWithKey:NEW_GUIDE_SETTING_WALLET TapBlock:nil];
+//        UIImage *guideImg = [UIImage imageNamed:@"img_floating_layer_wallet"];
+//        UIImageView *guideImgV = [[UIImageView alloc] init];
+//        guideImgV.frame = CGRectZero;
+//        if (IS_iPhone_5) {
+//            guideImgV.frame = CGRectMake(SCREEN_WIDTH-guideImg.size.width - 12, 25, guideImg.size.width, guideImg.size.height);
+//        } else if (IS_iPhone_6) {
+//            guideImgV.frame = CGRectMake(SCREEN_WIDTH-guideImg.size.width - 12, 25, guideImg.size.width, guideImg.size.height);
+//        } else if (IS_iPhone6_Plus) {
+//            guideImgV.frame = CGRectMake(SCREEN_WIDTH-guideImg.size.width - 12, 25, guideImg.size.width, guideImg.size.height);
+//        } else if (IS_iPhoneX) {
+//            guideImgV.frame = CGRectMake(SCREEN_WIDTH-guideImg.size.width - 12, 50, guideImg.size.width, guideImg.size.height);
+//        }
+//
+//        guideImgV.image = guideImg;
+//        [guideBV addSubview:guideImgV];
+//
+//        UIImage *guideImg1 = [UIImage imageNamed:@"img_floating_layer_vpn"];
+//        UIImageView *guideImgV1 = [[UIImageView alloc] init];
+//        guideImgV1.frame = CGRectZero;
+//        if (IS_iPhone_5) {
+//            guideImgV1.frame = CGRectMake(2, SCREEN_HEIGHT - guideImg1.size.height + 5, guideImg1.size.width, guideImg1.size.height);
+//        } else if (IS_iPhone_6) {
+//            guideImgV1.frame = CGRectMake(10, SCREEN_HEIGHT - guideImg1.size.height + 5, guideImg1.size.width, guideImg1.size.height);
+//        } else if (IS_iPhone6_Plus) {
+//            guideImgV1.frame = CGRectMake(10, SCREEN_HEIGHT - guideImg1.size.height + 8, guideImg1.size.width, guideImg1.size.height);
+//        } else if (IS_iPhoneX) {
+//            guideImgV1.frame = CGRectMake(10, SCREEN_HEIGHT - guideImg1.size.height - 30, guideImg1.size.width, guideImg1.size.height);
+//        }
+//
+//        guideImgV1.image = guideImg1;
+//        [guideBV addSubview:guideImgV1];
+//    }
+//}
 
 - (void) changeServer:(NSNotification *) noti
 {
