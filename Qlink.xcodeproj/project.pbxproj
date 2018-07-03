@@ -199,6 +199,8 @@
 		58A4DB0F20EB13C8001C241D /* GuideVpnAddView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A4DB0E20EB13C8001C241D /* GuideVpnAddView.m */; };
 		58A4DB1120EB13D8001C241D /* GuideVpnAddView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58A4DB1020EB13D8001C241D /* GuideVpnAddView.xib */; };
 		58A4DB1420EB1F38001C241D /* GuideBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A4DB1320EB1F38001C241D /* GuideBaseView.m */; };
+		58A4DB1720EB4316001C241D /* GuideClickWalletView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A4DB1620EB4316001C241D /* GuideClickWalletView.m */; };
+		58A4DB1920EB4320001C241D /* GuideClickWalletView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58A4DB1820EB4320001C241D /* GuideClickWalletView.xib */; };
 		58A4DEAB206234AC00E72F52 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A4DEAA206234AC00E72F52 /* AppDelegate.m */; };
 		58A4DEAE206234AC00E72F52 /* LaunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A4DEAD206234AC00E72F52 /* LaunchViewController.m */; };
 		58A4DEB6206234AC00E72F52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58A4DEB4206234AC00E72F52 /* LaunchScreen.storyboard */; };
@@ -748,6 +750,9 @@
 		58A4DB1020EB13D8001C241D /* GuideVpnAddView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GuideVpnAddView.xib; sourceTree = "<group>"; };
 		58A4DB1220EB1F38001C241D /* GuideBaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GuideBaseView.h; sourceTree = "<group>"; };
 		58A4DB1320EB1F38001C241D /* GuideBaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GuideBaseView.m; sourceTree = "<group>"; };
+		58A4DB1520EB4316001C241D /* GuideClickWalletView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GuideClickWalletView.h; sourceTree = "<group>"; };
+		58A4DB1620EB4316001C241D /* GuideClickWalletView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GuideClickWalletView.m; sourceTree = "<group>"; };
+		58A4DB1820EB4320001C241D /* GuideClickWalletView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GuideClickWalletView.xib; sourceTree = "<group>"; };
 		58A4DEA6206234AC00E72F52 /* Qlink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Qlink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58A4DEA9206234AC00E72F52 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		58A4DEAA206234AC00E72F52 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -2044,6 +2049,9 @@
 				58A4DB0D20EB13C8001C241D /* GuideVpnAddView.h */,
 				58A4DB0E20EB13C8001C241D /* GuideVpnAddView.m */,
 				58A4DB1020EB13D8001C241D /* GuideVpnAddView.xib */,
+				58A4DB1520EB4316001C241D /* GuideClickWalletView.h */,
+				58A4DB1620EB4316001C241D /* GuideClickWalletView.m */,
+				58A4DB1820EB4320001C241D /* GuideClickWalletView.xib */,
 			);
 			path = NewGuide;
 			sourceTree = "<group>";
@@ -2615,6 +2623,7 @@
 				737F90B720E3965D008BC9C2 /* GuidePageView3.xib in Resources */,
 				73C1BA13207E184F0080C59F /* HMScanner.bundle in Resources */,
 				73B6F4E720AEC08E004B7219 /* nodes.json in Resources */,
+				58A4DB1920EB4320001C241D /* GuideClickWalletView.xib in Resources */,
 				5860AD6F20CFB5A700EEB6CE /* NewWalletViewController.xib in Resources */,
 				5860ADBC20CFB61900EEB6CE /* ChatTipView.xib in Resources */,
 				5860AD4C20CFB57300EEB6CE /* SendFundsView.xib in Resources */,
@@ -2923,6 +2932,7 @@
 				58E7C5DE20A3E62B00EDDD09 /* ChatTipView.m in Sources */,
 				583A0F6A20844D8A00EF9ABD /* ContinentModel.m in Sources */,
 				5839F5282068FC70004C4A54 /* MD5Util.m in Sources */,
+				58A4DB1720EB4316001C241D /* GuideClickWalletView.m in Sources */,
 				580D915520625A4400B12506 /* UIView+BlockGesture.m in Sources */,
 				580D914820625A4400B12506 /* UIImage+FX.m in Sources */,
 				73B6F4D220AEC08E004B7219 /* AccountState.swift in Sources */,
