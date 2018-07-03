@@ -1,5 +1,5 @@
 //
-//  GuideClickWalletView.h
+//  GuideEnterWalletView.h
 //  Qlink
 //
 //  Created by Jelly Foo on 2018/7/3.
@@ -8,8 +8,8 @@
 
 #import "GuideBaseView.h"
 
-@interface GuideClickWalletView : GuideBaseView
+@interface GuideEnterWalletView : GuideBaseView
 
-+ (GuideClickWalletView *)getNibView;
++ (GuideEnterWalletView *)getNibView;
 
 @end

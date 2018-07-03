@@ -55,8 +55,8 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="rightOffset" destination="rdi-22-a7u" id="eMk-7H-gSj"/>
-                <outlet property="topOffset" destination="86i-aX-8BY" id="T4T-wS-LGs"/>
+                <outlet property="rightOffset" destination="rdi-22-a7u" id="3q0-ft-g1D"/>
+                <outlet property="topOffset" destination="86i-aX-8BY" id="Kbb-Vc-oaW"/>
             </connections>
             <point key="canvasLocation" x="349.5" y="138.5"/>
         </view>

@@ -42,6 +42,9 @@
 #import "TransferUtil.h"
 #import "GuideVpnAddView.h"
 #import "GuideClickWalletView.h"
+#import "GuideVpnCountryView.h"
+#import "GuideVpnListView.h"
+#import "GuideVpnListConnectView.h"
 
 @interface VpnViewController ()<UITableViewDelegate,UITableViewDataSource,SRRefreshDelegate> {
 }
@@ -162,7 +165,7 @@
         } else {
         
             DDLogDebug(@"定位失败");
-//            [weakSelf sendVPNReqeustWithCountry];
+            [weakSelf sendVPNReqeustWithCountry];
         }
 //        [weakSelf sendVPNReqeustWithCountry];
     }];
@@ -467,6 +470,7 @@ static BOOL refreshAnimate = YES;
                // [TransferUtil sendFundsRequestWithType:3 withVPNInfo:_selectVPNInfo];
             }
 //            [self addNewGuideVPNConnect];
+            [self addNewGuideVpnListConnect];
         }
             break;
         case NEVPNStatusReasserting:
@@ -510,8 +514,9 @@ static BOOL refreshAnimate = YES;
 
 - (void)addNewGuideClickAdd {
     CGRect hollowOutFrame = [_registerVPNBtn.superview convertRect:_registerVPNBtn.frame toView:[UIApplication sharedApplication].keyWindow];
+    @weakify_self
     [[GuideVpnAddView getNibView] showGuideTo:hollowOutFrame tapBlock:^{
-        
+        [weakSelf addNewGuideCountry];
     }];
 }
 
@@ -523,131 +528,27 @@ static BOOL refreshAnimate = YES;
     }];
 }
 
-//- (void)addNewGuideClickWallet {
-////    [HWUserdefault insertObj:@(NO) withkey:NEW_GUIDE_CLICK_WALLET];
-//    NSNumber *guideLocal = [HWUserdefault getObjectWithKey:NEW_GUIDE_CLICK_WALLET];
-//    if (!guideLocal || [guideLocal boolValue] == NO) {
-//        @weakify_self
-//        UIView *guideBV = [NewGuideUtil showNewGuideWithKey:NEW_GUIDE_CLICK_WALLET TapBlock:^{
-//            [weakSelf addNewGuideVPNRegister];
-//        }];
-//        UIImage *guideImg = [UIImage imageNamed:@"img_img_floating_layer_qlc_wallet"];
-//        UIImageView *guideImgV = [[UIImageView alloc] init];
-//        guideImgV.frame = CGRectZero;
-//        if (IS_iPhone_5) {
-//            guideImgV.frame = CGRectMake(SCREEN_WIDTH-guideImg.size.width-10, SCREEN_HEIGHT-guideImg.size.height + 5, guideImg.size.width, guideImg.size.height);
-//        } else if (IS_iPhone_6) {
-//            guideImgV.frame = CGRectMake(SCREEN_WIDTH-guideImg.size.width-20, SCREEN_HEIGHT-guideImg.size.height + 5, guideImg.size.width, guideImg.size.height);
-//        } else if (IS_iPhone6_Plus) {
-//            guideImgV.frame = CGRectMake(SCREEN_WIDTH-guideImg.size.width-20, SCREEN_HEIGHT-guideImg.size.height + 5, guideImg.size.width, guideImg.size.height);
-//        } else if (IS_iPhoneX) {
-//            guideImgV.frame = CGRectMake(SCREEN_WIDTH-guideImg.size.width - 10, SCREEN_HEIGHT-guideImg.size.height - 30, guideImg.size.width, guideImg.size.height);
-//        }
-//        
-//        guideImgV.image = guideImg;
-//        [guideBV addSubview:guideImgV];
-//    }
-//}
-//
-//- (void)addNewGuideVPNRegister {
-////    [HWUserdefault insertObj:@(NO) withkey:NEW_GUIDE_VPN_REGISTER];
-//    NSNumber *guideLocal = [HWUserdefault getObjectWithKey:NEW_GUIDE_VPN_REGISTER];
-//    if (!guideLocal || [guideLocal boolValue] == NO) {
-//        @weakify_self
-//        UIView *guideBV = [NewGuideUtil showNewGuideWithKey:NEW_GUIDE_VPN_REGISTER TapBlock:^{
-//            [weakSelf addNewGuideVPNServerLocation];
-//        }];
-//        UIImage *guideImg = [UIImage imageNamed:@"img_floating_layer_vpn_add"];
-//        UIImageView *guideImgV = [[UIImageView alloc] init];
-//        guideImgV.frame = CGRectZero;
-//        if (IS_iPhone_5) {
-//            guideImgV.frame = CGRectMake(SCREEN_WIDTH-guideImg.size.width-13, 26, guideImg.size.width, guideImg.size.height);
-//        } else if (IS_iPhone_6) {
-//            guideImgV.frame = CGRectMake(SCREEN_WIDTH-guideImg.size.width-13, 26, guideImg.size.width, guideImg.size.height);
-//        } else if (IS_iPhone6_Plus) {
-//            guideImgV.frame = CGRectMake(SCREEN_WIDTH-guideImg.size.width-13, 26, guideImg.size.width, guideImg.size.height);
-//        } else if (IS_iPhoneX) {
-//            guideImgV.frame = CGRectMake(SCREEN_WIDTH-guideImg.size.width-13, 50, guideImg.size.width, guideImg.size.height);
-//        }
-//        
-//        guideImgV.image = guideImg;
-//        [guideBV addSubview:guideImgV];
-//    }
-//}
-//
-//- (void)addNewGuideVPNServerLocation {
-////    [HWUserdefault insertObj:@(NO) withkey:NEW_GUIDE_VPN_SERVER_LOCATION];
-//    NSNumber *guideLocal = [HWUserdefault getObjectWithKey:NEW_GUIDE_VPN_SERVER_LOCATION];
-//    if (!guideLocal || [guideLocal boolValue] == NO) {
-//        @weakify_self
-//        UIView *guideBV = [NewGuideUtil showNewGuideWithKey:NEW_GUIDE_VPN_SERVER_LOCATION TapBlock:^{
-//            [weakSelf addNewGuideVPNList];
-//        }];
-//        UIImage *guideImg = [UIImage imageNamed:@"img_floating_layer_vpn_location"];
-//        UIImageView *guideImgV = [[UIImageView alloc] init];
-//        guideImgV.frame = CGRectZero;
-//        if (IS_iPhone_5) {
-//            guideImgV.frame = CGRectMake((SCREEN_WIDTH-guideImg.size.width)/2.0, 92, guideImg.size.width, guideImg.size.height);
-//        } else if (IS_iPhone_6) {
-//            guideImgV.frame = CGRectMake((SCREEN_WIDTH-guideImg.size.width)/2.0, 92, guideImg.size.width, guideImg.size.height);
-//        } else if (IS_iPhone6_Plus) {
-//            guideImgV.frame = CGRectMake((SCREEN_WIDTH-guideImg.size.width)/2.0, 92, guideImg.size.width, guideImg.size.height);
-//        } else if (IS_iPhoneX) {
-//            guideImgV.frame = CGRectMake((SCREEN_WIDTH-guideImg.size.width)/2.0, 114, guideImg.size.width, guideImg.size.height);
-//        }
-//        
-//        guideImgV.image = guideImg;
-//        [guideBV addSubview:guideImgV];
-//    }
-//}
-//
-//- (void)addNewGuideVPNList {
-////    [HWUserdefault insertObj:@(NO) withkey:NEW_GUIDE_VPN_LIST];
-//    NSNumber *guideLocal = [HWUserdefault getObjectWithKey:NEW_GUIDE_VPN_LIST];
-//    if (!guideLocal || [guideLocal boolValue] == NO) {
-//        UIView *guideBV = [NewGuideUtil showNewGuideWithKey:NEW_GUIDE_VPN_LIST TapBlock:^{
-//        }];
-//        UIImage *guideImg = [UIImage imageNamed:@"img_floating_layer_vpn_list"];
-//        UIImageView *guideImgV = [[UIImageView alloc] init];
-//        guideImgV.frame = CGRectZero;
-//        if (IS_iPhone_5) {
-//            guideImgV.frame = CGRectMake((SCREEN_WIDTH-guideImg.size.width)/2.0, 170, guideImg.size.width, guideImg.size.height);
-//        } else if (IS_iPhone_6) {
-//            guideImgV.frame = CGRectMake((SCREEN_WIDTH-guideImg.size.width)/2.0, 170, guideImg.size.width, guideImg.size.height);
-//        } else if (IS_iPhone6_Plus) {
-//            guideImgV.frame = CGRectMake((SCREEN_WIDTH-guideImg.size.width)/2.0, 170, guideImg.size.width, guideImg.size.height);
-//        } else if (IS_iPhoneX) {
-//            guideImgV.frame = CGRectMake((SCREEN_WIDTH-guideImg.size.width)/2.0, 194, guideImg.size.width, guideImg.size.height);
-//        }
-//        
-//        guideImgV.image = guideImg;
-//        [guideBV addSubview:guideImgV];
-//    }
-//}
-//
-//- (void)addNewGuideVPNConnect {
-////    [HWUserdefault insertObj:@(NO) withkey:NEW_GUIDE_VPN_LIST_CONNECT];
-//    NSNumber *guideLocal = [HWUserdefault getObjectWithKey:NEW_GUIDE_VPN_LIST_CONNECT];
-//    if (!guideLocal || [guideLocal boolValue] == NO) {
-//        UIView *guideBV = [NewGuideUtil showNewGuideWithKey:NEW_GUIDE_VPN_LIST_CONNECT TapBlock:^{
-//        }];
-//        UIImage *guideImg = [UIImage imageNamed:@"img_floating_layer_vpn_list"];
-//        UIImageView *guideImgV = [[UIImageView alloc] init];
-//        guideImgV.frame = CGRectZero;
-//        if (IS_iPhone_5) {
-//            guideImgV.frame = CGRectMake((SCREEN_WIDTH-guideImg.size.width)/2.0, 170, guideImg.size.width, guideImg.size.height);
-//        } else if (IS_iPhone_6) {
-//            guideImgV.frame = CGRectMake((SCREEN_WIDTH-guideImg.size.width)/2.0, 170, guideImg.size.width, guideImg.size.height);
-//        } else if (IS_iPhone6_Plus) {
-//            guideImgV.frame = CGRectMake((SCREEN_WIDTH-guideImg.size.width)/2.0, 170, guideImg.size.width, guideImg.size.height);
-//        } else if (IS_iPhoneX) {
-//            guideImgV.frame = CGRectMake((SCREEN_WIDTH-guideImg.size.width)/2.0, 194, guideImg.size.width, guideImg.size.height);
-//        }
-//        
-//        guideImgV.image = guideImg;
-//        [guideBV addSubview:guideImgV];
-//    }
-//}
+- (void)addNewGuideCountry {
+    CGRect hollowOutFrame = CGRectMake((SCREEN_WIDTH - 55)/2.0, 96, 55, 24);
+    @weakify_self
+    [[GuideVpnCountryView getNibView] showGuideTo:hollowOutFrame tapBlock:^{
+        [weakSelf addNewGuideVpnList];
+    }];
+}
+
+- (void)addNewGuideVpnList {
+    CGRect hollowOutFrame = CGRectMake(17, 177, SCREEN_WIDTH - 17*2, 64);
+    [[GuideVpnListView getNibView] showGuideTo:hollowOutFrame tapBlock:^{
+        
+    }];
+}
+
+- (void)addNewGuideVpnListConnect {
+    CGRect hollowOutFrame = CGRectMake(17, 177, SCREEN_WIDTH - 17*2, 64);
+    [[GuideVpnListConnectView getNibView] showGuideTo:hollowOutFrame tapBlock:^{
+        
+    }];
+}
 
 #pragma mark - 如果是主网。隐藏注册资产铵钮
 - (void) showRegisterVPN

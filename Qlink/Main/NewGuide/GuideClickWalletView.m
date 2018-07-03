@@ -8,9 +8,8 @@
 
 #import "GuideClickWalletView.h"
 
-#import "UIView+BlockGesture.h"
-
 @interface GuideClickWalletView ()
+
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomOffset;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *rightOffset;
 
@@ -25,6 +24,7 @@
 }
 
 - (void)showGuideTo:(CGRect)hollowOutFrame tapBlock:(void (^)(void))tapB {
+//    [HWUserdefault insertObj:@(NO) withkey:NEW_GUIDE_CLICK_WALLET];
     NSNumber *guideLocal = [HWUserdefault getObjectWithKey:NEW_GUIDE_CLICK_WALLET];
     if (!guideLocal || [guideLocal boolValue] == NO) {
         UIView *bgView = [UIApplication sharedApplication].keyWindow;
