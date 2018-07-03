@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -50,12 +49,11 @@
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="gHL-xo-aZ8" firstAttribute="bottom" secondItem="KVy-In-Qny" secondAttribute="bottom" id="B4F-Gf-cgB"/>
-                <constraint firstItem="KVy-In-Qny" firstAttribute="leading" secondItem="gHL-xo-aZ8" secondAttribute="leading" id="krr-sb-3lo"/>
-                <constraint firstItem="KVy-In-Qny" firstAttribute="trailing" secondItem="gHL-xo-aZ8" secondAttribute="trailing" id="sJg-gV-aX8"/>
+                <constraint firstAttribute="bottom" secondItem="KVy-In-Qny" secondAttribute="bottom" id="B4F-Gf-cgB"/>
+                <constraint firstItem="KVy-In-Qny" firstAttribute="leading" secondItem="V0j-So-FUx" secondAttribute="leading" id="krr-sb-3lo"/>
+                <constraint firstItem="KVy-In-Qny" firstAttribute="trailing" secondItem="V0j-So-FUx" secondAttribute="trailing" id="sJg-gV-aX8"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <viewLayoutGuide key="safeArea" id="gHL-xo-aZ8"/>
             <connections>
                 <outlet property="bottomOffset" destination="BHD-0I-E9N" id="Fap-mq-dpp"/>
                 <outlet property="rightOffset" destination="DXo-Kp-S9d" id="KTr-vc-9JQ"/>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -20,6 +20,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VPNConnectViewController">
             <connections>
                 <outlet property="bandWidthLab" destination="mYe-N1-ot3" id="o0J-5X-Nfh"/>
+                <outlet property="connectBtn" destination="ByN-M8-OwL" id="Xz7-Tq-mAN"/>
                 <outlet property="continentLab" destination="wIq-ub-NDI" id="9ob-cu-q94"/>
                 <outlet property="countryLab" destination="6zJ-m3-Gbm" id="zTK-ah-Dvd"/>
                 <outlet property="devicesConnectLab" destination="fbp-eY-GuS" id="jVQ-H4-pbJ"/>
@@ -354,7 +355,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DS6-LO-gg1">
-                                                    <rect key="frame" x="78.5" y="352.5" width="219" height="59"/>
+                                                    <rect key="frame" x="78.5" y="354" width="219" height="59"/>
                                                     <string key="text">ARE YOU SURE YOU WANT TO
 SPEND 3.0 QLC TO
 CONNECT?</string>
@@ -363,12 +364,13 @@ CONNECT?</string>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7bB-4i-RYz">
-                                                    <rect key="frame" x="0.0" y="449.5" width="375" height="84"/>
+                                                    <rect key="frame" x="0.0" y="451" width="375" height="84"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yeh-5V-ewm">
-                                                            <rect key="frame" x="20" y="20" width="164" height="44"/>
+                                                            <rect key="frame" x="19.5" y="20" width="164" height="44"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="44" id="2sf-3X-etq"/>
+                                                                <constraint firstAttribute="width" constant="164" id="yBV-0d-GV6"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="VAGRoundedBT-Regular" family="VAGRounded BT" pointSize="13"/>
                                                             <state key="normal" title="CANCEL" backgroundImage="bg_gray_button"/>
@@ -377,7 +379,7 @@ CONNECT?</string>
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ByN-M8-OwL">
-                                                            <rect key="frame" x="191" y="20" width="164" height="44"/>
+                                                            <rect key="frame" x="191.5" y="20" width="164" height="44"/>
                                                             <fontDescription key="fontDescription" name="VAGRoundedBT-Regular" family="VAGRounded BT" pointSize="13"/>
                                                             <state key="normal" title="YES, CONNECT" backgroundImage="bg_continue">
                                                                 <color key="titleColor" red="0.32156862749999998" green="0.0" blue="0.51372549020000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -393,9 +395,8 @@ CONNECT?</string>
                                                         <constraint firstAttribute="height" constant="84" id="GxJ-Hv-qjT"/>
                                                         <constraint firstItem="ByN-M8-OwL" firstAttribute="top" secondItem="Yeh-5V-ewm" secondAttribute="top" id="H3e-zR-JUf"/>
                                                         <constraint firstItem="Yeh-5V-ewm" firstAttribute="top" secondItem="7bB-4i-RYz" secondAttribute="top" constant="20" id="NwQ-t3-vSp"/>
-                                                        <constraint firstAttribute="trailing" secondItem="ByN-M8-OwL" secondAttribute="trailing" constant="20" id="UVz-5G-njT"/>
-                                                        <constraint firstItem="ByN-M8-OwL" firstAttribute="leading" secondItem="Yeh-5V-ewm" secondAttribute="trailing" constant="7" id="bwc-Tc-l5t"/>
-                                                        <constraint firstItem="Yeh-5V-ewm" firstAttribute="leading" secondItem="7bB-4i-RYz" secondAttribute="leading" constant="20" id="fJT-vF-Xkj"/>
+                                                        <constraint firstItem="ByN-M8-OwL" firstAttribute="leading" secondItem="Yeh-5V-ewm" secondAttribute="trailing" constant="8" id="bwc-Tc-l5t"/>
+                                                        <constraint firstItem="Yeh-5V-ewm" firstAttribute="centerX" secondItem="7bB-4i-RYz" secondAttribute="centerX" constant="-86" id="jFI-V6-n3E"/>
                                                         <constraint firstItem="ByN-M8-OwL" firstAttribute="width" secondItem="Yeh-5V-ewm" secondAttribute="width" id="lSh-g1-WoT"/>
                                                     </constraints>
                                                 </view>
@@ -404,8 +405,8 @@ CONNECT?</string>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="8eY-4K-ON2" secondAttribute="trailing" constant="20" id="6F8-Jy-xY1"/>
                                                 <constraint firstItem="DS6-LO-gg1" firstAttribute="centerX" secondItem="q0c-PT-Fcl" secondAttribute="centerX" id="9Ml-nf-UsJ"/>
-                                                <constraint firstItem="DS6-LO-gg1" firstAttribute="top" secondItem="8eY-4K-ON2" secondAttribute="bottom" constant="56" id="Ax4-YC-LXe"/>
                                                 <constraint firstItem="edU-AH-XYt" firstAttribute="leading" secondItem="q0c-PT-Fcl" secondAttribute="leading" constant="44" id="EEr-pa-Y9i"/>
+                                                <constraint firstAttribute="bottom" secondItem="7bB-4i-RYz" secondAttribute="bottom" constant="10" id="ETH-xC-alt"/>
                                                 <constraint firstItem="ojB-Qq-2O0" firstAttribute="top" secondItem="WQg-ey-4lJ" secondAttribute="top" id="Gg6-ci-UXF"/>
                                                 <constraint firstAttribute="bottom" secondItem="Exg-Dn-JYf" secondAttribute="bottom" id="I6t-Bv-KqQ"/>
                                                 <constraint firstItem="Exg-Dn-JYf" firstAttribute="centerX" secondItem="q0c-PT-Fcl" secondAttribute="centerX" id="PD1-cg-Fyv"/>

@@ -1,5 +1,5 @@
 //
-//  GuideClickWalletView.h
+//  GuideVpnCountryView.h
 //  Qlink
 //
 //  Created by Jelly Foo on 2018/7/3.
@@ -8,8 +8,8 @@
 
 #import "GuideBaseView.h"
 
-@interface GuideClickWalletView : GuideBaseView
+@interface GuideVpnCountryView : GuideBaseView
 
-+ (GuideClickWalletView *)getNibView;
++ (GuideVpnCountryView *)getNibView;
 
 @end

@@ -31,6 +31,8 @@
 #import "VPNRegisterViewController.h"
 #import "Qlink-Swift.h"
 #import "SettingViewController.h"
+#import "GuideEnterWalletView.h"
+#import "GuideSettingMoreView.h"
 
 #define WAIL_TIME 30
 
@@ -38,21 +40,12 @@
 {
     MyAssetsView *assetsView;
 }
-//@property (weak, nonatomic) IBOutlet NSLayoutConstraint *sliderLeadConstraint;
-//@property (weak, nonatomic) IBOutlet UIButton *assetsBtn;
-//@property (weak, nonatomic) IBOutlet UIButton *fundsBtn;
-//@property (weak, nonatomic) IBOutlet UIView *sliderBack;
-//@property (weak, nonatomic) IBOutlet UIScrollView *contentScroll;
+
 @property (weak, nonatomic) IBOutlet UIView *menuBack;
-//@property (weak, nonatomic) IBOutlet NSLayoutConstraint *scrollContentHeight;
-//@property (weak, nonatomic) IBOutlet UIScrollView *fundsScroll;
-//@property (weak, nonatomic) IBOutlet UIView *fundsScrollContent;
-//@property (weak, nonatomic) IBOutlet NSLayoutConstraint *fundsScrollWidth;
-//@property (weak, nonatomic) IBOutlet RefreshScrollView *refreshScroll;
+@property (weak, nonatomic) IBOutlet UIButton *settingBtn;
 @property (weak, nonatomic) IBOutlet UIScrollView *refreshScroll;
 @property (weak, nonatomic) IBOutlet UIButton *userHeadBtn;
 @property (weak, nonatomic) IBOutlet UIImageView *testView1;
-//@property (weak, nonatomic) IBOutlet UILabel *testView2;
 @property (weak, nonatomic) IBOutlet UILabel *lblNeo;
 @property (weak, nonatomic) IBOutlet UILabel *lblQlc;
 @property (weak, nonatomic) IBOutlet UILabel *lblGas;
@@ -90,6 +83,7 @@
     }
     
 //    [self addNewGuide];
+    [self addNewGuideEnterWallet];
 }
 
 
@@ -117,44 +111,21 @@
     
 }
 
-//- (void)addNewGuide {
-////    [HWUserdefault insertObj:@(NO) withkey:NEW_GUIDE_SETTING_WALLET];
-//    NSNumber *guideLocal = [HWUserdefault getObjectWithKey:NEW_GUIDE_SETTING_WALLET];
-//    if (!guideLocal || [guideLocal boolValue] == NO) {
-//        UIView *guideBV = [NewGuideUtil showNewGuideWithKey:NEW_GUIDE_SETTING_WALLET TapBlock:nil];
-//        UIImage *guideImg = [UIImage imageNamed:@"img_floating_layer_wallet"];
-//        UIImageView *guideImgV = [[UIImageView alloc] init];
-//        guideImgV.frame = CGRectZero;
-//        if (IS_iPhone_5) {
-//            guideImgV.frame = CGRectMake(SCREEN_WIDTH-guideImg.size.width - 12, 25, guideImg.size.width, guideImg.size.height);
-//        } else if (IS_iPhone_6) {
-//            guideImgV.frame = CGRectMake(SCREEN_WIDTH-guideImg.size.width - 12, 25, guideImg.size.width, guideImg.size.height);
-//        } else if (IS_iPhone6_Plus) {
-//            guideImgV.frame = CGRectMake(SCREEN_WIDTH-guideImg.size.width - 12, 25, guideImg.size.width, guideImg.size.height);
-//        } else if (IS_iPhoneX) {
-//            guideImgV.frame = CGRectMake(SCREEN_WIDTH-guideImg.size.width - 12, 50, guideImg.size.width, guideImg.size.height);
-//        }
-//
-//        guideImgV.image = guideImg;
-//        [guideBV addSubview:guideImgV];
-//
-//        UIImage *guideImg1 = [UIImage imageNamed:@"img_floating_layer_vpn"];
-//        UIImageView *guideImgV1 = [[UIImageView alloc] init];
-//        guideImgV1.frame = CGRectZero;
-//        if (IS_iPhone_5) {
-//            guideImgV1.frame = CGRectMake(2, SCREEN_HEIGHT - guideImg1.size.height + 5, guideImg1.size.width, guideImg1.size.height);
-//        } else if (IS_iPhone_6) {
-//            guideImgV1.frame = CGRectMake(10, SCREEN_HEIGHT - guideImg1.size.height + 5, guideImg1.size.width, guideImg1.size.height);
-//        } else if (IS_iPhone6_Plus) {
-//            guideImgV1.frame = CGRectMake(10, SCREEN_HEIGHT - guideImg1.size.height + 8, guideImg1.size.width, guideImg1.size.height);
-//        } else if (IS_iPhoneX) {
-//            guideImgV1.frame = CGRectMake(10, SCREEN_HEIGHT - guideImg1.size.height - 30, guideImg1.size.width, guideImg1.size.height);
-//        }
-//
-//        guideImgV1.image = guideImg1;
-//        [guideBV addSubview:guideImgV1];
-//    }
-//}
+- (void)addNewGuideEnterWallet {
+    CGRect hollowOutFrame = [_settingBtn.superview convertRect:_settingBtn.frame toView:[UIApplication sharedApplication].keyWindow];
+    @weakify_self
+    [[GuideEnterWalletView getNibView] showGuideTo:hollowOutFrame tapBlock:^{
+        [weakSelf addNewGuideSettingMore];
+    }];
+}
+
+- (void)addNewGuideSettingMore {
+    CGRect circleFrame1 = [_settingBtn.superview convertRect:_settingBtn.frame toView:[UIApplication sharedApplication].keyWindow];
+    CGRect circleFrame2 = CGRectMake((3.0*(0.0+1.0)-2.0)*SCREEN_WIDTH/(3.0*3.0), SCREEN_HEIGHT - 49, 49, 49);
+    [[GuideSettingMoreView getNibView] showGuideToCircle1:circleFrame1 circle2:circleFrame2 tapBlock:^{
+        
+    }];
+}
 
 - (void) changeServer:(NSNotification *) noti
 {

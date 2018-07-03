@@ -18,6 +18,7 @@
 #import "TransferUtil.h"
 #import <SDWebImage/UIButton+WebCache.h>
 #import "VPNOperationUtil.h"
+#import "GuideVpnConnectView.h"
 
 @interface VPNConnectViewController () {
     BOOL checkConnnectOK;
@@ -33,6 +34,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *devicesConnectLab;
 @property (weak, nonatomic) IBOutlet UILabel *spendTipLab;
 @property (weak, nonatomic) IBOutlet UIButton *vpnUserBtn;
+@property (weak, nonatomic) IBOutlet UIButton *connectBtn;
 
 @property (nonatomic, strong) NSData *vpnData;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
@@ -42,38 +44,21 @@
 @implementation VPNConnectViewController
 - (void)viewDidAppear:(BOOL)animated
 {
-//    [self addNewGuide];
+    [self addNewGuide];
     [super viewDidAppear:animated];
 }
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-//- (void)addNewGuide {
-//    
-//    NSNumber *guideLocal = [HWUserdefault getObjectWithKey:NEW_VPN_CONNECT];
-//    if (!guideLocal || [guideLocal boolValue] == NO) {
-//        UIView *guideBV = [NewGuideUtil showNewGuideWithKey:NEW_VPN_CONNECT TapBlock:nil];
-//        UIImage *guideImg = [UIImage imageNamed:@"img_floating_layer_vpn_connect"];
-//        UIImageView *guideImgV = [[UIImageView alloc] init];
-//        guideImgV.frame = CGRectZero;
-//        if (IS_iPhone_5) {
-//            CGPoint bottomOffset = CGPointMake(0, self.scrollView.contentSize.height - self.scrollView.bounds.size.height);
-//            [self.scrollView setContentOffset:bottomOffset animated:NO];
-//            guideImgV.frame = CGRectMake(SCREEN_WIDTH-guideImg.size.width, SCREEN_HEIGHT-guideImg.size.height -29, guideImg.size.width, guideImg.size.height);
-//        } else if (IS_iPhone_6) {
-//            guideImgV.frame = CGRectMake(SCREEN_WIDTH-guideImg.size.width-15, SCREEN_HEIGHT-guideImg.size.height -29, guideImg.size.width, guideImg.size.height);
-//        } else if (IS_iPhone6_Plus) {
-//            guideImgV.frame = CGRectMake(SCREEN_WIDTH-guideImg.size.width-25, SCREEN_HEIGHT-guideImg.size.height - 96, guideImg.size.width, guideImg.size.height);
-//        } else if (IS_iPhoneX) {
-//            guideImgV.frame = CGRectMake(SCREEN_WIDTH-guideImg.size.width - 15, SCREEN_HEIGHT-guideImg.size.height - 150, guideImg.size.width, guideImg.size.height);
-//        }
-//        
-//        guideImgV.image = guideImg;
-//        [guideBV addSubview:guideImgV];
-//    }
-//}
-
+- (void)addNewGuide {
+    if (IS_iPhone_5) {
+        CGPoint bottomOffset = CGPointMake(0, self.scrollView.contentSize.height - self.scrollView.bounds.size.height);
+        [self.scrollView setContentOffset:bottomOffset animated:NO];
+    }
+    CGRect hollowOutFrame = [_connectBtn.superview convertRect:_connectBtn.frame toView:[UIApplication sharedApplication].keyWindow];
+    [[GuideVpnConnectView getNibView] showGuideTo:hollowOutFrame tapBlock:nil];
+}
 
 #pragma mark - Noti
 

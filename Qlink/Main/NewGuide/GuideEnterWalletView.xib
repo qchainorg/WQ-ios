@@ -15,22 +15,22 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="0c7-FG-HuG" customClass="GuideVpnAddView">
+        <view contentMode="scaleToFill" id="uZs-Cx-ltk" customClass="GuideEnterWalletView">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="03c-Zh-jgB">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qba-UZ-wa0">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_floating_layer_add" translatesAutoresizingMaskIntoConstraints="NO" id="K7p-Ve-7II">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_floating_layer_add" translatesAutoresizingMaskIntoConstraints="NO" id="pQV-BG-UOU">
                             <rect key="frame" x="310" y="27" width="52" height="106"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="52" id="IkT-Fp-Up6"/>
-                                <constraint firstAttribute="height" constant="106" id="g5i-2V-vcn"/>
+                                <constraint firstAttribute="width" constant="52" id="dvT-xK-zn7"/>
+                                <constraint firstAttribute="height" constant="106" id="mjo-pB-nnf"/>
                             </constraints>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Earn QLC by sharing your configuration file" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uVG-Ru-hgC">
-                            <rect key="frame" x="25" y="141" width="325" height="44.5"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Settings Wallet" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Le5-L7-g0E">
+                            <rect key="frame" x="25" y="141" width="325" height="22.5"/>
                             <fontDescription key="fontDescription" name="VAGRoundedBT-Regular" family="VAGRounded BT" pointSize="18"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
@@ -38,25 +38,25 @@
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstItem="K7p-Ve-7II" firstAttribute="top" secondItem="03c-Zh-jgB" secondAttribute="top" constant="27" id="86i-aX-8BY"/>
-                        <constraint firstItem="uVG-Ru-hgC" firstAttribute="leading" secondItem="03c-Zh-jgB" secondAttribute="leading" constant="25" id="LmF-4l-DRL"/>
-                        <constraint firstItem="uVG-Ru-hgC" firstAttribute="top" secondItem="K7p-Ve-7II" secondAttribute="bottom" constant="8" id="TUb-QB-BBH"/>
-                        <constraint firstAttribute="trailing" secondItem="uVG-Ru-hgC" secondAttribute="trailing" constant="25" id="cZG-AT-eFM"/>
-                        <constraint firstAttribute="height" constant="250" id="mrN-Pn-5xY"/>
-                        <constraint firstAttribute="trailing" secondItem="K7p-Ve-7II" secondAttribute="trailing" constant="13" id="rdi-22-a7u"/>
+                        <constraint firstItem="Le5-L7-g0E" firstAttribute="leading" secondItem="qba-UZ-wa0" secondAttribute="leading" constant="25" id="8cY-8O-IeI"/>
+                        <constraint firstAttribute="height" constant="250" id="K0u-zh-IfK"/>
+                        <constraint firstItem="Le5-L7-g0E" firstAttribute="top" secondItem="pQV-BG-UOU" secondAttribute="bottom" constant="8" id="NhF-W9-3KX"/>
+                        <constraint firstAttribute="trailing" secondItem="Le5-L7-g0E" secondAttribute="trailing" constant="25" id="g7h-84-Uyg"/>
+                        <constraint firstAttribute="trailing" secondItem="pQV-BG-UOU" secondAttribute="trailing" constant="13" id="hzO-5q-66d"/>
+                        <constraint firstItem="pQV-BG-UOU" firstAttribute="top" secondItem="qba-UZ-wa0" secondAttribute="top" constant="27" id="wVn-QU-8BB"/>
                     </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="03c-Zh-jgB" firstAttribute="leading" secondItem="0c7-FG-HuG" secondAttribute="leading" id="CUC-gH-q03"/>
-                <constraint firstItem="03c-Zh-jgB" firstAttribute="top" secondItem="0c7-FG-HuG" secondAttribute="top" id="Gc2-g3-fMd"/>
-                <constraint firstItem="03c-Zh-jgB" firstAttribute="trailing" secondItem="0c7-FG-HuG" secondAttribute="trailing" id="N46-xk-e3M"/>
+                <constraint firstItem="qba-UZ-wa0" firstAttribute="top" secondItem="uZs-Cx-ltk" secondAttribute="top" id="OKP-rd-pLh"/>
+                <constraint firstItem="qba-UZ-wa0" firstAttribute="leading" secondItem="uZs-Cx-ltk" secondAttribute="leading" id="okD-qi-der"/>
+                <constraint firstItem="qba-UZ-wa0" firstAttribute="trailing" secondItem="uZs-Cx-ltk" secondAttribute="trailing" id="pFT-Mc-qq8"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="rightOffset" destination="rdi-22-a7u" id="3q0-ft-g1D"/>
-                <outlet property="topOffset" destination="86i-aX-8BY" id="Kbb-Vc-oaW"/>
+                <outlet property="rightOffset" destination="hzO-5q-66d" id="G5d-tq-Vgz"/>
+                <outlet property="topOffset" destination="wVn-QU-8BB" id="8hQ-NS-w6Y"/>
             </connections>
             <point key="canvasLocation" x="349.5" y="138.5"/>
         </view>
