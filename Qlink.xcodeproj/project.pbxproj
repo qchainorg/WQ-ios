@@ -62,7 +62,6 @@
 		580D917D206260C300B12506 /* WifiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 580D917B206260C300B12506 /* WifiViewController.m */; };
 		580D9187206260DE00B12506 /* VpnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 580D9185206260DE00B12506 /* VpnViewController.m */; };
 		580D918C206260EA00B12506 /* WalletViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 580D918A206260EA00B12506 /* WalletViewController.m */; };
-		580D919920638F8A00B12506 /* SwiftFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580D919820638F8900B12506 /* SwiftFile.swift */; };
 		580D91B32063AE5300B12506 /* Roboto-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 580D91A72063AE5100B12506 /* Roboto-BoldItalic.ttf */; };
 		580D91B42063AE5300B12506 /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 580D91A82063AE5200B12506 /* Roboto-LightItalic.ttf */; };
 		580D91B52063AE5300B12506 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 580D91A92063AE5200B12506 /* Roboto-Regular.ttf */; };
@@ -500,7 +499,6 @@
 		580D9189206260EA00B12506 /* WalletViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WalletViewController.h; sourceTree = "<group>"; };
 		580D918A206260EA00B12506 /* WalletViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WalletViewController.m; sourceTree = "<group>"; };
 		580D919720638F8900B12506 /* Qlink-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Qlink-Bridging-Header.h"; sourceTree = "<group>"; };
-		580D919820638F8900B12506 /* SwiftFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftFile.swift; sourceTree = "<group>"; };
 		580D91A72063AE5100B12506 /* Roboto-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BoldItalic.ttf"; sourceTree = "<group>"; };
 		580D91A82063AE5200B12506 /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
 		580D91A92063AE5200B12506 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
@@ -1293,7 +1291,6 @@
 				588A7021208DD29B004B41D4 /* Assets.xcassets */,
 				58A4DEB8206234AC00E72F52 /* main.m */,
 				580D916D20625A5B00B12506 /* QlinkPrefixHeader.pch */,
-				580D919820638F8900B12506 /* SwiftFile.swift */,
 				580D919720638F8900B12506 /* Qlink-Bridging-Header.h */,
 				7377D190206CC6FB0072E628 /* Localizable.strings */,
 			);
@@ -2940,7 +2937,6 @@
 				58A4DB0F20EB13C8001C241D /* GuideVpnAddView.m in Sources */,
 				580D915320625A4400B12506 /* UIView+ViewController.m in Sources */,
 				580D914320625A4400B12506 /* UIImage+Rotate.m in Sources */,
-				580D919920638F8A00B12506 /* SwiftFile.swift in Sources */,
 				73B6F4E020AEC08E004B7219 /* Peer.swift in Sources */,
 				580D915A20625A4400B12506 /* UIView+Find.m in Sources */,
 				58AE1AD92074D22F00CE983B /* KeyChainUitl.swift in Sources */,
