@@ -519,7 +519,7 @@ static BOOL refreshAnimate = YES;
         [weakSelf addNewGuideCountry];
     }];
 }
-
+// 添加浮层
 - (void)addNewGuideClickWallet {
     CGRect hollowOutFrame = CGRectMake((3.0*(2.0+1.0)-2.0)*SCREEN_WIDTH/(3.0*3.0), SCREEN_HEIGHT - 49, 49, 49);
     @weakify_self
